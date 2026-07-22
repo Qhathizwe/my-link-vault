@@ -1,7 +1,35 @@
 import styles from './Form.module.css'
-import Vault from '../Vault/Vault'
+import React, {useState} from 'react'
+import { Input } from '../Input/Input';
 
 export const Form = () => {
+      const [title, setTitle] = useState('');
+  
+      const [link, setLink] = useState('');
+  
+      const [description, setDescription] = useState('');
+  
+      const [tags, setTags] = useState ('');
+
+         const handleInputChange_title = (event: React.ChangeEvent<HTMLInputElement>) => {
+         setTitle(event.target.value);
+         };
+
+         const handleInputChange_link = (event: React.ChangeEvent<HTMLInputElement>) => {
+         setLink(event.target.value);
+         };
+
+        const handleInputChange_tags = (event: React.ChangeEvent<HTMLInputElement>) => {
+         setTags(event.target.value);
+        };
+        const inputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) =>{
+        setDescription(event.target.value);
+}
+
+// function addLink{
+//   return(<></>)
+// }
+   
   return (
     <div className={styles.Form}>
       <h1>Mi-Link<span>-Vault</span></h1>
@@ -10,41 +38,38 @@ export const Form = () => {
 
         <div className={styles.Vault_inputs}>
 
-            <div className={styles.title_input}>
-            <label>Title :</label>
-            <input 
-            type='text' 
-            alt='title' 
-            placeholder='what is the link title' 
-            value={'newTitle'}/>
-            </div>
-            
-            <div className={styles.link_input}>
-            <label>Link :</label>
-            <input type='text'
-             alt='Link' 
-             placeholder='Paste your link here'
-             value={'newLink'}/>
-            </div>
+          <Input
+          label='title:'
+          value={title}
+          placeholder='what is the link title'
+          onChange={handleInputChange_title }
+          />
 
-            <div className={styles.Description_input}>
+          <Input
+          label='Link:'
+          value={link}
+          placeholder='Write / Paste your link here'
+          onChange={handleInputChange_link }
+          />
+
+          <div className={styles.Description_input}>
             <label >Description :</label>
             <textarea 
             placeholder='links Description here '
             className={styles.description_textArea}
-            value={'newDescription'}>
+            value={description}
+            onChange={inputChange}>
             </textarea>
             </div>
 
-            <div className={styles.Tags_input}>
-            <label>Tags :</label>
-            <input 
-            type='text' 
-            alt='Tags' placeholder='Type of Tag (optional)' 
-            value={"newTags"}/>
-            </div>
+          <Input
+          label='Tags:'
+          value={tags}
+          placeholder='Write / Paste your link here'
+          onChange={handleInputChange_tags }
+          />
 
-            <button className={styles.btn_add}>Add Link</button>
+            <button /*onClick={addLink}*/ className={styles.btn_add}>Add Link</button>
 
         </div>
       </div>

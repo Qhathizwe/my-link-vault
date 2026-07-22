@@ -20,7 +20,7 @@ span{
     flex-direction: column;
     flex-wrap: wrap;
     gap: 30px;
-    height: 40%;
+    height: 45%;
     align-content: center;
     border: 5px solid green;
     border-radius: 10px;
@@ -29,12 +29,13 @@ span{
     margin-right: 250px;
 }
 .Vault_inputs{
-    margin-top: 30px;
     display: flex;
     flex-direction: column;
     gap: 10px
 }
 label{
+    display: block;
+    text-align: start;
     font-size: 26px;
     font-weight: bolder;
     font-family: cursive;
@@ -44,7 +45,7 @@ input{
     height: 25px;
 }
 .description_textArea{
-    width: 390px;
+    width: 300px;
     height: 60px
 }
 .btn_add{

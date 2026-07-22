@@ -19,7 +19,6 @@ export const Input:React.FC<InputProps> = ({label, placeholder, value, onChange,
         value={value}
         onChange={onChange}
         style={styles}
-        
         />
 
     </div>

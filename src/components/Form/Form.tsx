@@ -26,10 +26,15 @@ export const Form = () => {
         setDescription(event.target.value);
 }
 
-function addLink(){
+function addLink (){
 
   return(<></>)
 }
+
+// function del_Link (index){
+
+//   return(<></>)
+// }
    
   return (
     <div className={styles.Form}>
@@ -40,7 +45,7 @@ function addLink(){
         <div className={styles.Vault_inputs}>
 
           <Input
-          label='title:'
+          label='Title:'
           value={title}
           placeholder='what is the link title'
           onChange={handleInputChange_title }
@@ -77,14 +82,18 @@ function addLink(){
 
         </div>
       </div>
-{/* 
-      <div>
-        <ol>
-          {link.map((link, index) =>
-          <li>{link}</li>
-        )}
-        </ol>
-      </div> */}
+
+      <div className={styles.savedLinks}>
+        <h1>Saved-Links</h1>
+        {/* <ol>
+          {title.map((title, index) =>
+          <li key={index}>
+            <span className='linkItem'>{title}</span>
+          </li>
+          )}
+        </ol> */}
+
+      </div>;
     </div>
   )
 }

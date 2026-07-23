@@ -60,3 +60,17 @@ input{
     font-family: monospace;
     font-weight: bold;
 }
+.savedLinks{
+    width: 99vw;
+     border: 5px solid red;
+}
+.linksData{
+    width: 99vw;
+    border: 5px solid green;
+}
+.heading1, .heading2, .heading3, .heading4{
+    width: 18vw;
+    border: 5px solid yellow;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 26px;
+}

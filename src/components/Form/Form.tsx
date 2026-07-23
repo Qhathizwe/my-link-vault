@@ -85,6 +85,15 @@ function addLink (){
 
       <div className={styles.savedLinks}>
         <h1>Saved-Links</h1>
+        <div className={styles.linksData}>
+        <table>
+          <tr >
+            <td className={styles.heading1}>Titles</td>
+            <td className={styles.heading2}>Links</td>
+            <td className={styles.heading3}>Descriptions</td>
+            <td className={styles.heading4}>Tags</td>
+          </tr>
+        </table>
         {/* <ol>
           {title.map((title, index) =>
           <li key={index}>
@@ -92,6 +101,7 @@ function addLink (){
           </li>
           )}
         </ol> */}
+        </div>
 
       </div>;
     </div>

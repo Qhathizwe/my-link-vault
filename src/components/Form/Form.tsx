@@ -13,21 +13,29 @@ export const Form = () => {
 
          const handleInputChange_title = (event: React.ChangeEvent<HTMLInputElement>) => {
          setTitle(event.target.value);
+        
          };
 
          const handleInputChange_link = (event: React.ChangeEvent<HTMLInputElement>) => {
          setLink(event.target.value);
+        
          };
 
         const handleInputChange_tags = (event: React.ChangeEvent<HTMLInputElement>) => {
          setTags(event.target.value);
+        
         };
         const inputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) =>{
         setDescription(event.target.value);
+       
 }
 
 function addLink (){
-
+  // let allLinks = [title, link, description, tags]
+  // console.log(allLinks)
+  
+  // const obj = {name: 'scelo',suname: 'phoswa'};
+  // console.log(obj.name)
   return(<></>)
 }
 

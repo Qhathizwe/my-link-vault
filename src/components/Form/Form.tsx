@@ -3,8 +3,11 @@ import React, {useState} from 'react'
 import { Input } from '../Input/Input'
 import type { Links } from '../../Links'
 
+type FormProp = {
+  onSave: (link: Links ) => void
+}
 
-export const Form = () => {
+export const Form: React.FC<FormProp> = ({onSave}) => {
   
   const [newTitle, setNewTitle] = useState<Links[]>([]);
       const [title, setTitle] = useState('');
@@ -39,18 +42,28 @@ function addLink (){
 //   link: Links;
  
 // }
- id: Date.now();
 
- const addLink =(newList: Links)=>{
+ const  addNewLink =(newList: Links)=>{
   setNewTitle([...newTitle, newList]);
  };
 
- console.log({addLink})
+  const newLinkItem: Links = {
+      id: Date.now(), // Generates a unique ID
+      title: title,
+      link: link,
+      description: description,
+      tags: tags,
+    };
+
+    onSave(newLinkItem);
+    setTitle('');
+    setLink('');
+    setDescription('');
+    setTags('');
+  };
 
 
- return(<></>)
  
-}
 
 
 // function del_Link (index){

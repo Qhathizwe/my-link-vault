@@ -1,10 +1,14 @@
 import styles from './Form.module.css'
 import React, {useState} from 'react'
-import { Input } from '../Input/Input';
+import { Input } from '../Input/Input'
+import type { Links } from '../../Links'
+
 
 export const Form = () => {
-      const [title, setTitle] = useState('');
   
+  const [newTitle, setNewTitle] = useState<Links[]>([]);
+      const [title, setTitle] = useState('');
+
       const [link, setLink] = useState('');
   
       const [description, setDescription] = useState('');
@@ -31,13 +35,23 @@ export const Form = () => {
 }
 
 function addLink (){
-  // let allLinks = [title, link, description, tags]
-  // console.log(allLinks)
-  
-  // const obj = {name: 'scelo',suname: 'phoswa'};
-  // console.log(obj.name)
-  return(<></>)
+// type linkProps ={
+//   link: Links;
+ 
+// }
+ id: Date.now();
+
+ const addLink =(newList: Links)=>{
+  setNewTitle([...newTitle, newList]);
+ };
+
+ console.log({addLink})
+
+
+ return(<></>)
+ 
 }
+
 
 // function del_Link (index){
 
@@ -93,15 +107,15 @@ function addLink (){
 
       <div className={styles.savedLinks}>
         <h1>Saved-Links</h1>
-        <div className={styles.linksData}>
+        {/* <div className={styles.linksData}>
         <table>
           <tr >
-            <td className={styles.heading1}>Titles</td>
-            <td className={styles.heading2}>Links</td>
-            <td className={styles.heading3}>Descriptions</td>
-            <td className={styles.heading4}>Tags</td>
+            <thead className={styles.heading1}>Titles</thead>
+            <thead className={styles.heading2}>Links</thead>
+            <thead className={styles.heading3}>Descriptions</thead>
+            <thead className={styles.heading4}>Tags</thead>
           </tr>
-        </table>
+        </table> */}
         {/* <ol>
           {title.map((title, index) =>
           <li key={index}>
@@ -109,7 +123,7 @@ function addLink (){
           </li>
           )}
         </ol> */}
-        </div>
+        {/* </div> */}
 
       </div>;
     </div>

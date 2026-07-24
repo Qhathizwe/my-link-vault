@@ -5,7 +5,7 @@ type link_dt ={
     link : Links;
 }
 
-export const CardProps: React.FC <link_dt> = ({link}) => {
+export const LinkCard: React.FC <link_dt> = ({link}) => {
 
   return (
     <div>

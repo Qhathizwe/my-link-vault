@@ -2,7 +2,7 @@ import './App.css'
 import Form from './components/Form/Form'
 import type { Links } from './Links';
 import { useState } from 'react';
-// import { CardProps } from './components/Cards Props/CardProps';
+
 
 
 function App() {
@@ -15,7 +15,6 @@ function App() {
   return (
     <>
     < Form onSave={addNewLink}/>
-    {/* <CardProps /> */}
     </>
   )
 }

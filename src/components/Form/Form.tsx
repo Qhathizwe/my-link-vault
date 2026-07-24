@@ -3,6 +3,7 @@ import React, {useState} from 'react'
 import { Input } from '../Input/Input'
 import type { Links } from '../../Links'
 
+
 type FormProp = {
   onSave: (link: Links ) => void
 }
@@ -122,24 +123,6 @@ function addLink (){
       <div className={styles.savedLinks}>
         <h1>Saved-Links</h1>
         
-        {/* <div className={styles.linksData}>
-        <table>
-          <tr >
-            <thead className={styles.heading1}>Titles</thead>
-            <thead className={styles.heading2}>Links</thead>
-            <thead className={styles.heading3}>Descriptions</thead>
-            <thead className={styles.heading4}>Tags</thead>
-          </tr>
-        </table> */}
-        {/* <ol>
-          {title.map((title, index) =>
-          <li key={index}>
-            <span className='linkItem'>{title}</span>
-          </li>
-          )}
-        </ol> */}
-        {/* </div> */}
-
       </div>;
     </div>
   )

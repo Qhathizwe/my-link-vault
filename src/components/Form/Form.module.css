@@ -1,7 +1,6 @@
-.Form{
+.Vault_Container{
     text-align: center;
     width: 100vw;
-    height: 100vh;
     background-color: black;
     color: white;
     flex-wrap: wrap;
@@ -15,7 +14,7 @@ h1{
 span{
     color: white;
 }
-.Vault_Container{
+.Form{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;

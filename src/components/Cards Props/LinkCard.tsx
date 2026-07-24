@@ -1,14 +1,14 @@
 import React from 'react'
-import type {Links} from '../../Links'
+import type {LinkItem} from '../../Links'
 
 type link_dt ={
-    link : Links;
+    link : LinkItem ;
 }
 
 export const LinkCard: React.FC <link_dt> = ({link}) => {
 
   return (
-    <div>
+    <div className={'card-container'}>
         <h1>{link.title}</h1>
         <p>{link.link}</p>
         <p>{link.description}</p>
@@ -18,3 +18,5 @@ export const LinkCard: React.FC <link_dt> = ({link}) => {
     </div>
   )
 }
+
+export default LinkCard

@@ -1,9 +1,9 @@
 import React from 'react'
-import type { Links } from '../../Links'
+import type { LinkItem } from '../../Links'
 import { LinkCard } from '../Cards Props/LinkCard'
 
 interface LinkListProps {
-    links : Links[];
+    links : LinkItem[];
 }
 
 export const LinksList: React.FC<LinkListProps> = ({links}) => {
@@ -18,3 +18,5 @@ export const LinksList: React.FC<LinkListProps> = ({links}) => {
     </div>
   )
 }
+
+export default LinksList

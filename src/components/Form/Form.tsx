@@ -1,11 +1,11 @@
 import styles from './Form.module.css'
 import React, {useState} from 'react'
 import { Input } from '../Input/Input'
-import type { Links } from '../../Links'
+import type { LinkItem } from '../../Links'
 
 
 type FormProp = {
-  onSave: (link: Links ) => void
+  onSave: (link: LinkItem ) => void
 }
 
 export const Form: React.FC<FormProp> = ({onSave}) => {
@@ -38,17 +38,9 @@ export const Form: React.FC<FormProp> = ({onSave}) => {
        
 }
 
-function addLink (){
-// type linkProps ={
-//   link: Links;
- 
-// }
+const addLink = () => {
 
-//  const  addNewLink =(newList: Links)=>{
-//   setNewTitle([...newTitle, newList]);
-
-
-  const newLinkItem: Links = {
+  const newLinkItem: LinkItem= {
       id: Date.now(), // Generates a unique ID
       title: title,
       link: link,
@@ -58,26 +50,23 @@ function addLink (){
     };
 
     onSave(newLinkItem);
+
     setTitle('');
     setLink('');
     setDescription('');
     setTags('');
-
-
  };
  
-
-
 // function del_Link (index){
 
 //   return(<></>)
 // }
    
   return (
-    <div className={styles.Form}>
+    <div className={styles.Vault_Container}>
       <h1>Mi-Link<span>-Vault</span></h1>
 
-      <div className={styles.Vault_Container}>
+      <div className={styles .Form}>
 
         <div className={styles.Vault_inputs}>
 
@@ -115,15 +104,13 @@ function addLink (){
             <button 
             onClick={addLink} 
             className={styles.btn_add}
-            >Add-Link</button>
+            >Add-Link 
+            </button>
 
         </div>
       </div>
 
-      <div className={styles.savedLinks}>
-        <h1>Saved-Links</h1>
-        
-      </div>;
+      
     </div>
   )
 }

@@ -9,7 +9,7 @@ type FormProp = {
 
 export const Form: React.FC<FormProp> = ({onSave}) => {
   
-  const [newTitle, setNewTitle] = useState<Links[]>([]);
+  // const [newTitle, setNewTitle] = useState<Links[]>([]);
       const [title, setTitle] = useState('');
 
       const [link, setLink] = useState('');
@@ -43,9 +43,9 @@ function addLink (){
  
 // }
 
- const  addNewLink =(newList: Links)=>{
-  setNewTitle([...newTitle, newList]);
- };
+//  const  addNewLink =(newList: Links)=>{
+//   setNewTitle([...newTitle, newList]);
+
 
   const newLinkItem: Links = {
       id: Date.now(), // Generates a unique ID
@@ -53,6 +53,7 @@ function addLink (){
       link: link,
       description: description,
       tags: tags,
+      
     };
 
     onSave(newLinkItem);
@@ -60,9 +61,9 @@ function addLink (){
     setLink('');
     setDescription('');
     setTags('');
-  };
 
 
+ };
  
 
 
@@ -120,6 +121,7 @@ function addLink (){
 
       <div className={styles.savedLinks}>
         <h1>Saved-Links</h1>
+        
         {/* <div className={styles.linksData}>
         <table>
           <tr >

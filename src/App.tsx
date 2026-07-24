@@ -2,10 +2,11 @@ import './App.css'
 import Form from './components/Form/Form'
 import type { Links } from './Links';
 import { useState } from 'react';
+// import { CardProps } from './components/Cards Props/CardProps';
 
 
 function App() {
-    const [newTitle, setNewTitle] = useState<Links[]>([]);
+  const [newTitle, setNewTitle] = useState<Links[]>([]);
 
    const  addNewLink =(newList: Links)=>{
     setNewTitle([...newTitle, newList]);
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
     < Form onSave={addNewLink}/>
+    {/* <CardProps /> */}
     </>
   )
 }

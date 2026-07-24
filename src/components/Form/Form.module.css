@@ -61,7 +61,9 @@ input{
 }
 .savedLinks{
     width: 99vw;
-     border: 5px solid red;
+    padding-top: 10px;
+     /* border: 5px solid red; */
+     background-color: black;
 }
 .linksData{
     width: 99vw;
@@ -72,4 +74,7 @@ input{
     border: 5px solid yellow;
     font-family: 'Courier New', Courier, monospace;
     font-size: 26px;
+}
+.savedLinksTopic{
+    text-align: center;
 }

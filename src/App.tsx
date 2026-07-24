@@ -11,7 +11,6 @@ function App() {
 
  const onSave = (newLink: LinkItem) =>{
   setLinks((prevLinks) => {
-    console.log(prevLinks)
     return [...prevLinks, newLink]
   })
  }
@@ -20,7 +19,7 @@ function App() {
     <>
     < Form onSave={onSave}/>
     <div className={styles.savedLinks}>
-      <h1>Saved-Links</h1>
+      <h1 className={styles.savedLinksTopic}>Saved-Links</h1>
     
     <LinksList links={links} />
      </div>;

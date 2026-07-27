@@ -26,16 +26,19 @@ function App() {
     setEditingLink(null)
   }
 
+  const Delete = (id: number) => {
+    setLinks((prevLinks) => prevLinks.filter((links) => links.id !==id));
+  };
 
   return (
     <>
     < Form onSave={add} key={editingLink?.id ?? 'new'} onEdit={updatedLink} editingLink={editingLink} />
     <div className={styles.savedLinksContainer}>
       <h1 className={styles.savedLinksTopic}>Saved-Links</h1>
-    <div className={styles.SearchContainer}>
+    {/* <div className={styles.SearchContainer}>
       <input type='text' placeholder='search by title, link, description or tag'/>
       <button className={styles.searchBtn}>Search</button>
-    </div>
+    </div> */}
     <div className={styles.savedLinkItem}>
     <LinksList links={links} onEdit={editBtn}/>
     </div>

@@ -19,7 +19,7 @@ span{
     flex-direction: column;
     flex-wrap: wrap;
     gap: 30px;
-    height: 45%;
+    height: 50%;
     align-content: center;
     border: 5px solid green;
     border-radius: 10px;
@@ -40,16 +40,16 @@ label{
     font-family: cursive;
 }
 input{
-    width: 300px;
+    width: 400px;
     height: 25px;
 }
 .description_textArea{
-    width: 300px;
+    width: 400px;
     height: 60px
 }
 .btn_add{
     width: 150px;
-    height: 50px;
+    height: 48px;
     border-radius: 8px;
     background-color: green;
     align-self: center;
@@ -57,9 +57,9 @@ input{
     cursor: pointer;
     color: white;
     font-family: monospace;
-    font-weight: bold;
+    font-weight: bold;  
 }
-.savedLinksContainer{
+/* .savedLinksContainer{
     width: 100vw;
     padding-top: 10px;
      background-color: black;
@@ -72,6 +72,7 @@ input{
 
 .savedLinkItem{
     display: flex;
+    border: 5px solid red;
 }
 .SearchContainer{
     text-align: center;
@@ -87,4 +88,4 @@ input{
 .SearchContainer input{
     width: 400px;
     height: 38px;
-}
+} */

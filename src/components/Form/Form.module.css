@@ -59,22 +59,32 @@ input{
     font-family: monospace;
     font-weight: bold;
 }
-.savedLinks{
-    width: 99vw;
+.savedLinksContainer{
+    width: 100vw;
     padding-top: 10px;
-     /* border: 5px solid red; */
      background-color: black;
+     height: 100vh;
 }
-.linksData{
-    width: 99vw;
-    border: 5px solid green;
-}
-.heading1, .heading2, .heading3, .heading4{
-    width: 18vw;
-    border: 5px solid yellow;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 26px;
-}
+
 .savedLinksTopic{
     text-align: center;
+}
+
+.savedLinkItem{
+    display: flex;
+}
+.SearchContainer{
+    text-align: center;
+    padding-bottom: 15px;
+}
+.searchBtn{
+    width: 100px;
+    height: 48px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+}
+.SearchContainer input{
+    width: 400px;
+    height: 38px;
 }

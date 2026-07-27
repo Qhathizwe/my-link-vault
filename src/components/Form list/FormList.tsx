@@ -4,15 +4,17 @@ import { LinkCard } from '../Cards Props/LinkCard'
 
 interface LinkListProps {
     links : LinkItem[];
+    onEdit : (id: number) => void
 }
 
-export const LinksList: React.FC<LinkListProps> = ({links}) => {
+export const LinksList: React.FC<LinkListProps> = ({links, onEdit}) => {
   return (
     <div>
         {links.map((listItem) =>(
-           <LinkCard key={listItem.id} 
-           link={listItem} 
-           
+           <LinkCard key={listItem.id}  
+           link={listItem}
+           onEdit={onEdit} 
+          
            />
         ))}
     </div>

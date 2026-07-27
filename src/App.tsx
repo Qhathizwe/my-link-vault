@@ -9,19 +9,36 @@ import styles from './components/Form/Form.module.css'
 function App() {
  const [links, setLinks] = useState<LinkItem[]>([])
 
- const onSave = (newLink: LinkItem) =>{
+ const add = (newLink: LinkItem) =>{
   setLinks((prevLinks) => {
     return [...prevLinks, newLink]
   })
  }
+  const [editingLink, setEditingLink] = useState <LinkItem | null> (null)
+
+  const editBtn = (id: number) =>{
+    const LinkId = links.find(linkID => linkID.id === id)
+    if (LinkId) setEditingLink(LinkId)
+  }
+
+  const updatedLink = (updated : LinkItem) => {
+    setLinks (links.map(linkID => linkID.id === updated.id ? updated : linkID ))
+    setEditingLink(null)
+  }
+
 
   return (
     <>
-    < Form onSave={onSave}/>
-    <div className={styles.savedLinks}>
+    < Form onSave={add} key={editingLink?.id ?? 'new'} onEdit={updatedLink} editingLink={editingLink} />
+    <div className={styles.savedLinksContainer}>
       <h1 className={styles.savedLinksTopic}>Saved-Links</h1>
-    
-    <LinksList links={links} />
+    <div className={styles.SearchContainer}>
+      <input type='text' placeholder='search by title, link, description or tag'/>
+      <button className={styles.searchBtn}>Search</button>
+    </div>
+    <div className={styles.savedLinkItem}>
+    <LinksList links={links} onEdit={editBtn}/>
+    </div>
      </div>;
     </>
   )

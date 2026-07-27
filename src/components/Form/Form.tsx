@@ -6,18 +6,22 @@ import type { LinkItem } from '../../Links'
 
 type FormProp = {
   onSave: (link: LinkItem ) => void
+  onEdit: (link: LinkItem) => void
+  editingLink?: LinkItem | null 
+
 }
 
-export const Form: React.FC<FormProp> = ({onSave}) => {
+export const Form: React.FC<FormProp> = ({onSave, onEdit, editingLink}) => {
   
   // const [newTitle, setNewTitle] = useState<Links[]>([]);
-      const [title, setTitle] = useState('');
+      const [title, setTitle] = useState( editingLink?. title ?? '');
 
-      const [link, setLink] = useState('');
+      const [link, setLink] = useState(editingLink?. link ??'');
   
-      const [description, setDescription] = useState('');
+      const [description, setDescription] = useState(editingLink?. description ??'');
   
-      const [tags, setTags] = useState ('');
+      const [tags, setTags] = useState (editingLink?. tags ?? '');
+      [editingLink];
 
          const handleInputChange_title = (event: React.ChangeEvent<HTMLInputElement>) => {
          setTitle(event.target.value);
@@ -39,6 +43,10 @@ export const Form: React.FC<FormProp> = ({onSave}) => {
 }
 
 const addLink = () => {
+  if (!title.trim() || !link.trim() || !description.trim() || !tags.trim()) {
+    alert('faka imafaneko zakhona!')
+    return
+  } 
 
   const newLinkItem: LinkItem= {
       id: Date.now(), // Generates a unique ID
@@ -46,10 +54,28 @@ const addLink = () => {
       link: link,
       description: description,
       tags: tags,
-      
-    };
 
+    };
+    
+   
+      
+    
+    if (editingLink)
+  {
+      const updatedLink : LinkItem = 
+    {
+       ...editingLink, 
+       title,
+       link, 
+       description, 
+       tags
+    }
+      onEdit(updatedLink);
+  }
+    else
+    {
     onSave(newLinkItem);
+    }
 
     setTitle('');
     setLink('');
@@ -103,8 +129,8 @@ const addLink = () => {
 
             <button 
             onClick={addLink} 
-            className={styles.btn_add}
-            >Add-Link 
+            className={styles.btn_add}>
+            {editingLink ? 'Edit-Link' : 'Add-Link'} 
             </button>
 
         </div>

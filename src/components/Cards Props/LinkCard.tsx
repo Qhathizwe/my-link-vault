@@ -4,9 +4,10 @@ import styles from './CardProps.module.css'
 
 type link_dt ={
     link : LinkItem ;
+    onEdit:(id:number) => void
 }
 
-export const LinkCard: React.FC <link_dt> = ({link}) => {
+export const LinkCard: React.FC <link_dt> = ({link, onEdit}) => {
 
   return (
     <div className={styles.cardContainer}>
@@ -14,7 +15,7 @@ export const LinkCard: React.FC <link_dt> = ({link}) => {
         <p>{link.link}</p>
         <p>{link.description}</p>
         <p>{link.tags}</p>
-        <button>Edit</button>
+        <button onClick={() => onEdit(link.id)}>Edit</button>
         <button>Delete</button>
     </div>
   )

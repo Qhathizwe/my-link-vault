@@ -4,6 +4,7 @@ import Form from './components/Form/Form'
 import type { LinkItem } from './Links';
 import { useState } from 'react';
 import styles from './components/Form/Form.module.css'
+import './components/Cards Props/CardProps.module.css'
 
 
 function App() {
@@ -33,15 +34,19 @@ function App() {
   return (
     <>
     < Form onSave={add} key={editingLink?.id ?? 'new'} onEdit={updatedLink} editingLink={editingLink} />
+
     <div className={styles.savedLinksContainer}>
       <h1 className={styles.savedLinksTopic}>Saved-Links</h1>
-    {/* <div className={styles.SearchContainer}>
-      <input type='text' placeholder='search by title, link, description or tag'/>
-      <button className={styles.searchBtn}>Search</button>
-    </div> */}
-    <div className={styles.savedLinkItem}>
-    <LinksList links={links} onEdit={editBtn}/>
+
+    <div className={styles.SearchContainer}>
+    <input type='text' placeholder='search by title, link, description or tag'/>
+    <button className={styles.searchBtn}>Search</button>
     </div>
+
+    <div>
+    <LinksList links={links} onEdit={editBtn} onDelete={Delete}/>
+    </div>
+
      </div>;
     </>
   )

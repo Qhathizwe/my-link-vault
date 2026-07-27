@@ -21,7 +21,6 @@ export const Form: React.FC<FormProp> = ({onSave, onEdit, editingLink}) => {
       const [description, setDescription] = useState(editingLink?. description ??'');
   
       const [tags, setTags] = useState (editingLink?. tags ?? '');
-      [editingLink];
 
          const handleInputChange_title = (event: React.ChangeEvent<HTMLInputElement>) => {
          setTitle(event.target.value);

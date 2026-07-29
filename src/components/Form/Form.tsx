@@ -102,12 +102,13 @@ const addLink = () => {
           onChange={handleInputChange_title }
           />
 
-          <Input
-          label='Link:'
-          value={link}
-          placeholder='Write / Paste your link here'
-          onChange={handleInputChange_link }
-          />
+        <input 
+         type="email" 
+         required
+         value={link} 
+         onChange={handleInputChange_link}
+         placeholder='paste/ type url here' />
+
 
           <div className={styles.Description_input}>
             <label >Description :</label>
@@ -129,7 +130,7 @@ const addLink = () => {
             <button 
             onClick={addLink} 
             className={styles.btn_add}>
-            {editingLink ? 'Edit-Link' : 'Add-Link'} 
+            {editingLink ? 'Update-Link' : 'Add-Link'} 
             </button>
 
         </div>

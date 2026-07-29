@@ -74,7 +74,8 @@ function App() {
 
         <div className={styles.SearchContainer}>
           
-          <input 
+          <input
+            className={styles.searchInput} 
             type='text' 
             placeholder='search by title, link, description or tag'
             value={searchQuery}

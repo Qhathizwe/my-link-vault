@@ -13,10 +13,10 @@ export const LinkCard: React.FC <link_dt> = ({link, onEdit, onDelete}) => {
   return (
     <div className={styles.cardContainer}>
       <div className={styles.cards}>      
-          <h1>{link.title}</h1>
-          <p>{link.link}</p>
-          <p>{link.description}</p>
-          <p>{link.tags}</p>  
+          <h1 className={styles.title}>{link.title}</h1>
+          <p className={styles.link}>{link.link}</p>
+          <p className={styles.description}>{link.description}</p>
+          <p className={styles.tags}>{link.tags}</p>  
       </div>  
       <button onClick={() => onEdit(link.id)}>Edit</button>
       <button onClick={() => onDelete(link.id)}>Delete</button>

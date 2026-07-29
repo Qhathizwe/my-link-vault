@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box; /* Crucial for preventing layout breakage from padding */
+}
+
 .Vault_Container{
     text-align: center;
     width: 100vw;
@@ -41,7 +45,7 @@ label{
 }
 input{
     width: 400px;
-    height: 25px;
+    height: 30px;
 }
 .description_textArea{
     width: 400px;
@@ -69,6 +73,7 @@ textarea:hover{
 }
 
 .savedLinksContainer{
+    flex-wrap: wrap;
     width: 100vw;
     padding-top: 10px;
     background-color: black;
@@ -79,11 +84,15 @@ textarea:hover{
     text-align: center;
 }
 .cardsItems{
+    box-sizing: border-box;
     display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
 }
 .SearchContainer{
     text-align: center;
     padding-bottom: 15px;
+    flex-wrap: wrap;
 }
 .searchBtn{
     width: 100px;
@@ -95,6 +104,7 @@ textarea:hover{
     transition: all .3s;
 }
 button:hover {
+ cursor: pointer;
  transform: scale(0.98);
  border-radius: 20px;
  background-color: #00ff75;
@@ -102,5 +112,12 @@ button:hover {
 }
 
 input:hover { 
-  border: 3px solid #00ff75; 
+  border: 3px solid #00ff75;
+  font-weight: 600; 
 }
+.searchInput{
+    height:45px;
+    width: 400px
+    
+}
+

@@ -123,7 +123,7 @@ const addLink = () => {
           <Input
           label='Tags:'
           value={tags}
-          placeholder='Write / Paste your link here'
+          placeholder='#tags'
           onChange={handleInputChange_tags }
           />
 

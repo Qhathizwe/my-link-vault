@@ -86,13 +86,17 @@ textarea:hover{
 .cardsItems{
     box-sizing: border-box;
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     cursor: pointer;
+    height:auto;
+    background-color: black;
 }
 .SearchContainer{
     text-align: center;
     padding-bottom: 15px;
     flex-wrap: wrap;
+    
 }
 .searchBtn{
     width: 100px;
@@ -120,4 +124,6 @@ input:hover {
     width: 400px
     
 }
-
+.cards{
+    font-family: 'Times New Roman', Times, serif;
+}

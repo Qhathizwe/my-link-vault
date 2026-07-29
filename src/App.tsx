@@ -84,7 +84,7 @@ function App() {
           <button className={styles.searchBtn}>Search</button>
         </div>
 
-        <div>
+        <div className={styles.savedLinksItems}>
           
           <LinksList links={filteredLinks} onEdit={editBtn} onDelete={Delete} />
         </div>

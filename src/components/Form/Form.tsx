@@ -102,9 +102,9 @@ const addLink = () => {
           onChange={handleInputChange_title }
           />
 
-        <input 
+        <Input 
+         label='Url:'
          type="email" 
-         required
          value={link} 
          onChange={handleInputChange_link}
          placeholder='paste/ type url here' />

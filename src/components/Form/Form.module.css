@@ -21,6 +21,7 @@ span{
 .Form{
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 30px;
     height: 50%;
@@ -127,3 +128,54 @@ input:hover {
 .cards{
     font-family: 'Times New Roman', Times, serif;
 }
+
+/*-----------------------media query 320px to 400px-----------------------------*/
+@media (320px <= width <= 400px){
+input{
+        flex-wrap: wrap;
+        width: 250px;
+        align-content: center;
+    }
+.description_textArea{
+    width: 250px;
+}
+.searchInput{
+    width: 270px;
+}
+.Form{
+    margin-left: 10px;
+    margin-right: 10px;
+    align-content: center;
+    text-align: center;
+}
+label{
+    text-align: center;
+}
+}
+
+/*-----------------------media query 320px to 480px-----------------------------*/
+/* @media (400px <= width <= 480px){
+input{
+        flex-wrap: wrap;
+        width: 250px;
+        align-content: center;
+    }
+.description_textArea{
+    width: 250px;
+}
+.searchInput{
+    width: 270px;
+}
+.Form{
+    margin-left: 10px;
+    margin-right: 10px;
+    align-content: center;
+    text-align: center;
+}
+label{
+    text-align: center;
+}
+} */
+
+
+
